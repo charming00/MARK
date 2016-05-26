@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.geekband006.SlideMenu
+        android:id="@+id/map_slide_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include layout="@layout/layout_menu" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/activity_all_item_map_actionbar" />
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/all_bmapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="45dp"
+                android:clickable="true" />
+
+        </RelativeLayout>
+    </android.geekband006.SlideMenu>
+
+</RelativeLayout>

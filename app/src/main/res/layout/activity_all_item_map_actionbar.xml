@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#211f1c">
+
+    <ImageView
+        android:id="@+id/all_setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_setting"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/map_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="列表"
+        android:textColor="#8f8e8d"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="120dp"/>
+
+    <TextView
+        android:id="@+id/map_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="地图"
+        android:textColor="#f5db6a"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="120dp"/>
+
+    <ImageView
+        android:id="@+id/all_content_add"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_item_add"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp">
+
+    <RelativeLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <Button
+            android:id="@+id/edit_cancel"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/ic_button_bcg"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="@color/button_textcolor"/>
+
+        <Button
+            android:id="@+id/edit_confirm"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ic_button_bcg"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="完成"
+            android:textSize="16sp"
+            android:textColor="@color/button_textcolor"/>
+
+        <TextView
+            android:id="@+id/text_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_cancel"
+            android:layout_marginTop="25dp"
+            android:text="事件描述" />
+
+        <EditText
+            android:id="@+id/content_edittext"
+            android:layout_width="300dp"
+            android:layout_height="140dp"
+            android:layout_below="@+id/text_describe"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="start"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:id="@+id/locate_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_edittext"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/location_image"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_enter_location" />
+
+            <TextView
+                android:id="@+id/edit_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/location_image"
+                android:layout_marginLeft="10dp"
+                android:text="添加定位"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/text_alermtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_layout"
+        android:text="提醒时间"/>
+    
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/text_alermtime"
+        android:layout_marginTop="10dp">
+
+
+        <DatePicker
+            android:id="@+id/date_picke"
+            android:calendarViewShown="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_toRightOf="@+id/date_picke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/time_layout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提前提醒" />
+        
+        <ImageView
+            android:id="@+id/clock_15min"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/ic_clock_15min"
+            />
+        <ImageView
+            android:id="@+id/clock_15min_clicked"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/ic_clock_15min_clicked"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/clock_30min"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_clock_30min"
+            android:layout_toRightOf="@+id/clock_15min"
+            android:layout_marginLeft="35dp"
+            />
+
+        <ImageView
+            android:id="@+id/clock_30min_clicked"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_clock_30min_clicked"
+            android:layout_toRightOf="@+id/clock_15min"
+            android:layout_marginLeft="35dp"
+            android:visibility="invisible"
+            />
+
+
+        <ImageView
+            android:id="@+id/clock_1hour"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_clock_1hour"
+            android:layout_toRightOf="@+id/clock_30min"
+            android:layout_marginLeft="35dp"
+            />
+
+        <ImageView
+            android:id="@+id/clock_1hour_clicked"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_clock_1hour_clicked"
+            android:layout_toRightOf="@+id/clock_30min"
+            android:layout_marginLeft="35dp"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/clock_1day"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_clock_1day"
+            android:layout_toRightOf="@+id/clock_1hour"
+            android:layout_marginLeft="35dp"
+            />
+
+        <ImageView
+            android:id="@+id/clock_1day_clicked"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_clock_1day_clicked"
+            android:layout_toRightOf="@+id/clock_1hour"
+            android:layout_marginLeft="35dp"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
